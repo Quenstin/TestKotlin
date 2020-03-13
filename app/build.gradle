@@ -9,7 +9,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.kotlin.testkotlin"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -39,4 +39,23 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
 
     implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //阿里热修复
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.13'
+
+    //刷新控件
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.blankj:utilcodex:1.26.0'
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.3.0X'
 }
