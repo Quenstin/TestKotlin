@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestKotlin</string>
+    <string name="main_fragment_title">周边便民</string>
 </resources>

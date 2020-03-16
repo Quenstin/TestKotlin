@@ -1,23 +1,26 @@
 package com.kotlin.testkotlin.activitys
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import com.kotlin.testkotlin.R
 import com.kotlin.testkotlin.adapter.MainPageAdapter
+import com.kotlin.testkotlin.basic.BaseActivity
 import com.kotlin.testkotlin.fragments.HomeFragment
 import com.kotlin.testkotlin.fragments.UserFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import me.majiajie.pagerbottomtabstrip.NavigationController
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private var mNavigationController: NavigationController? = null
 
+    override fun getLayoutId(): Int {
+       return R.layout.activity_main
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun setView() {
+    }
+
+    override fun setData() {
         setViewPagers()
     }
 
@@ -33,9 +36,9 @@ class MainActivity : AppCompatActivity() {
         main_vp.offscreenPageLimit = 1
         main_vp.adapter = mainAdapter
         mNavigationController = main_page_nv.material()
-            .addItem(R.mipmap.ic_launcher,
+            .addItem(R.mipmap.main,
                 "首页")
-            .addItem(R.mipmap.ic_launcher,
+            .addItem(R.mipmap.user,
                 "社区")
             .enableAnimateLayoutChanges()
             .build()

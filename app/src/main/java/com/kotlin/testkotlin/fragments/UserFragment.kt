@@ -1,23 +1,24 @@
 package com.kotlin.testkotlin.fragments
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.kotlin.testkotlin.R
+import com.kotlin.testkotlin.basic.BaseFragment
 
 /**
  * Created by zhgq on 2020/3/13
  * Describe：
  */
-class UserFragment : Fragment() {
+class UserFragment : BaseFragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.user_fragment_layout,null)
+    override fun getLayoutId(): Int {
+        return R.layout.user_fragment_layout
     }
+
+    override fun setView() {
+
+    }
+
+    override fun setData() {
+
+    }
+
 }

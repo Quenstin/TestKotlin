@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/main_fragment_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="111111111"
+        android:layout_height="50dp"
         android:gravity="center"
-        android:textColor="@color/colorPrimary"
-        />
+        android:text="@string/main_fragment_title"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_coursePackageDetail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/laba"/>
+        <TextView
+            android:id="@+id/main_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="-1"
+            android:text="kotlin编写使我快乐kotlin编写使我快乐kotlin编写使我快乐"/>
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_fragment_glid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_coursePackageDetail" />
+
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/main_fragment_tab"
+        android:layout_width="match_parent"
+        app:tl_textSelectColor="@color/black"
+        app:tl_textUnselectColor="@color/gray_five"
+        app:tl_indicator_color="@color/blue"
+        app:tl_indicator_width="15dp"
+        android:layout_height="50dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_fragment_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

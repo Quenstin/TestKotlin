@@ -58,4 +58,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'com.blankj:utilcodex:1.26.0'
     implementation 'me.majiajie:pager-bottom-tab-strip:2.3.0X'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
 }
